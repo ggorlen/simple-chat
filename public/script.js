@@ -1,7 +1,6 @@
 (() => {
   console.log("connecting...");
-  const url = "http://localhost:3000";
-  const socket = io.connect(url);
+  const socket = io.connect();
   let username = "guest";
   let loggedIn = false;
   const loginFormElem = document.querySelector("#login-form");
