@@ -1,0 +1,115 @@
+* { 
+  box-sizing: border-box; 
+  font-family: monospace; 
+}
+
+html { 
+  height: 100%; 
+}
+
+body { 
+  margin: 0; 
+  height: 100%;
+}
+
+button { 
+  background: #00ffff;
+  border: 1px solid #333;
+  padding: 0.4em;
+  cursor: pointer;
+  color: #000;
+}
+
+button:hover { 
+  background: #00eeee;
+  border: 1px solid #333;
+  padding: 0.4em;
+}
+
+li {
+  list-style: none;
+}
+
+#main {
+  height: 100%; 
+  display: flex;
+}
+
+#login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background : rgb(255, 255, 255, 0.7);
+  height: 100%;
+  width: 100%;
+}
+
+#login input {
+  border: 0;
+  border: 1px solid #333;
+  border-right: none;
+  padding: 0.5em;
+}
+
+#message-form, #login-form {
+  display: flex;
+  padding-bottom: 5px; 
+  padding-left: 5px; 
+}
+
+#sidebar {
+  min-width: 200px;
+  padding: 0.5em;
+  overflow-y: scroll;
+}
+
+.chat-container {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+}
+
+.message .text {
+  flex: 1 1 auto;
+}
+
+.message .timestamp {
+  margin-left: 0.5em;
+  font-size: 7pt;
+}
+
+#users {
+  margin: 0; 
+  padding: 0; 
+}
+
+#message-form input { 
+  width: 100%; 
+  border: 0;
+  border: 1px solid #333;
+  border-right: none;
+  padding: 0.5em;
+}
+
+#messages { 
+  flex: 1 1 auto; 
+  margin: 0; 
+  padding: 0; 
+  overflow-y: scroll;
+  word-break: break-word;
+  white-space: pre-line;
+}
+
+#messages li { 
+  padding: 5px 10px; 
+}
+
+#messages li:nth-child(odd) { 
+  background: #fafafa; 
+}
