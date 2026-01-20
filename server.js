@@ -1,12 +1,19 @@
 const express = require("express");
 const http = require("http");
 const path = require("path");
+const cors = require("cors");
 const {Server} = require("socket.io");
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server);
+const io = new Server(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"]
+  }
+});
 
+app.use(cors());
 app.use(express.static(path.join(__dirname, "public")));
 
 const usersBySocket = new Map();
